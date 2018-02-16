@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,44 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSU-hY-ijt">
+                                <rect key="frame" x="30" y="45" width="315" height="182.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bkn-Ao-rg4">
+                                <rect key="frame" x="29.5" y="252.5" width="315" height="182"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QoU-mc-DHd">
+                                <rect key="frame" x="30" y="459.5" width="315" height="182.5"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QoU-mc-DHd" firstAttribute="width" secondItem="bkn-Ao-rg4" secondAttribute="width" id="0pv-u6-hPT"/>
+                            <constraint firstItem="hSU-hY-ijt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8ou-Vm-hKk"/>
+                            <constraint firstItem="QoU-mc-DHd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BEF-pm-kUR"/>
+                            <constraint firstItem="QoU-mc-DHd" firstAttribute="top" secondItem="bkn-Ao-rg4" secondAttribute="bottom" constant="25" id="Rbt-CX-jki"/>
+                            <constraint firstItem="bkn-Ao-rg4" firstAttribute="top" secondItem="hSU-hY-ijt" secondAttribute="bottom" constant="25" id="SIz-uP-yKk"/>
+                            <constraint firstItem="bkn-Ao-rg4" firstAttribute="height" secondItem="hSU-hY-ijt" secondAttribute="height" id="UFw-J5-dhK"/>
+                            <constraint firstItem="QoU-mc-DHd" firstAttribute="height" secondItem="bkn-Ao-rg4" secondAttribute="height" id="aD8-R9-AG1"/>
+                            <constraint firstItem="hSU-hY-ijt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oi2-Lh-jh5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hSU-hY-ijt" secondAttribute="trailing" constant="30" id="pjM-0E-2Ob"/>
+                            <constraint firstItem="bkn-Ao-rg4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q1S-9U-Cyw"/>
+                            <constraint firstItem="hSU-hY-ijt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="qdT-e0-cA7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QoU-mc-DHd" secondAttribute="bottom" constant="25" id="w5Z-Sp-n42"/>
+                            <constraint firstItem="bkn-Ao-rg4" firstAttribute="width" secondItem="hSU-hY-ijt" secondAttribute="width" id="zfz-u6-nqm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mImageView1" destination="hSU-hY-ijt" id="d9z-5z-JaN"/>
+                        <outlet property="mImageView2" destination="bkn-Ao-rg4" id="LDf-9E-iCd"/>
+                        <outlet property="mImageView3" destination="QoU-mc-DHd" id="nU4-ae-FX4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
